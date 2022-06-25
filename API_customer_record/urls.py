@@ -15,15 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from board.views import DoctorViewSet, DirectionAPIView
+from board.views import DoctorViewSet, DirectionViewSet
 from rest_framework import routers
 
 router = routers.SimpleRouter()
 router.register(r'doctor', DoctorViewSet)
+router.register(r'direct', DirectionViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include(router.urls)),
     #path('api/v1/doctorlist', DoctorViewSet.as_view({'get': 'list'})),
+    #path('api/v1/directionlist', DirectionAPIView.as_view())
 ]
 

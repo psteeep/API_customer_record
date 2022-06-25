@@ -18,13 +18,14 @@ class DoctorViewSet(viewsets.ModelViewSet):
     queryset = Doctor.objects.all()
     serializer_class = DoctorSerializer
     pagination_class = DoctorViewSetPagination
-    filter_backends = (rest_framework.DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter,)
+    filter_backends = (DjangoFilterBackend, filters.OrderingFilter,)
     filter_class = DoctorFilter
+    filterset_fields = ('direction', 'work_exp',)
     # search_fields = ('doctor_name', 'slug', 'direction', 'description')
-    ordering_fields = ('birth_date', 'work_exp', 'sort_num')
+    ordering_fields = ('birth_date', 'work_exp', 'sort_num',)
     ordering = ('-work_exp',)
 
 
-class DirectionAPIView(generics.ListAPIView):
+class DirectionViewSet(viewsets.ModelViewSet):
     queryset = Direction.objects.all()
     serializer_class = DirectionSerializer
