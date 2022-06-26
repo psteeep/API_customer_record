@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/API_customer_record.iml" filepath="$PROJECT_DIR$/.idea/API_customer_record.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/API_docotor_qualification.iml" filepath="$PROJECT_DIR$/.idea/API_docotor_qualification.iml" />
     </modules>
   </component>
 </project>
