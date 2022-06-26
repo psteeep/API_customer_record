@@ -5,6 +5,7 @@ from .models import Doctor, Direction
 class DoctorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Doctor
+        depth = 1
         fields = "__all__"
         lookup_field = 'slug'
         extra_kwargs = {
