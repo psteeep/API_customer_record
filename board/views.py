@@ -18,6 +18,7 @@ class DoctorViewSet(viewsets.ModelViewSet):
     queryset = Doctor.objects.all()
     serializer_class = DoctorSerializer
     pagination_class = DoctorViewSetPagination
+    lookup_field = 'slug'
     filter_backends = (DjangoFilterBackend, filters.OrderingFilter,)
     filter_class = DoctorFilter
     filterset_fields = ('direction', 'work_exp',)
@@ -29,3 +30,4 @@ class DoctorViewSet(viewsets.ModelViewSet):
 class DirectionViewSet(viewsets.ModelViewSet):
     queryset = Direction.objects.all()
     serializer_class = DirectionSerializer
+    lookup_field = 'slug'

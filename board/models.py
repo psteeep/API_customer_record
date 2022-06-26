@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Direction(models.Model):
@@ -15,4 +16,10 @@ class Doctor(models.Model):
     birth_date = models.DateTimeField("data of birth")
     work_exp = models.IntegerField()
     sort_num = models.IntegerField()
+
+    def __str__(self):
+        return self.doctor_name
+
+    def get_absolute_url(self):
+        return reverse('post', kwargs={'post_slug': self.slug})
 
