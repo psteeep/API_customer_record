@@ -60,3 +60,16 @@ You can also sort list like so:
 http://127.0.0.1:8000/api/v1/doctor/?ordering=work_exp
 http://127.0.0.1:8000/api/v1/doctor/?ordering=-sort_num
 ```
+
+## Slug
+Was add slug URL and now, instead:
+```
+http://127.0.0.1:8000/api/v1/direct/1/
+```
+you can use:
+```
+http://127.0.0.1:8000/api/v1/direct/dentist/
+```
+
+
+Build with ❤️ by [psteeep](https://github.com/psteeep)
